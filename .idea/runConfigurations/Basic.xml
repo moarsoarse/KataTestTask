@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Basic" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="Roman" />
+    <module name="Kata Test Task" />
+    <option name="PROGRAM_PARAMETERS" value="XXII" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

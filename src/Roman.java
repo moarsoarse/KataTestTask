@@ -6,7 +6,7 @@ import java.util.stream.LongStream;
 
 public interface Roman{
     public enum Numeral {
-        M(1000), CM(900), D(500), CD(400), C(100), XC(90), L(50), XL(40), X(10), IX(9), V(5), IV(4), I(1);
+        C(100), XC(90), L(50), XL(40), X(10), IX(9), V(5), IV(4), I(1);
 
         public final long weight;
 
@@ -25,7 +25,7 @@ public interface Roman{
         }
     };
 
-    public static String encode(long n) {
+    public static String encode(short n) {
         return LongStream.iterate(n, l -> l - Numeral.getLargest(l).weight)
                 .limit(Numeral.values().length)
                 .filter(l -> l > 0)
@@ -48,12 +48,12 @@ public interface Roman{
         return result;
     }
 
-    public static void test(long n) {
+    public static void test(short n) {
         System.out.println(n + " = " + encode(n));
         System.out.println(encode(n) + " = " + decode(encode(n)));
     }
 
     public static void main(String[] args) {
-        LongStream.of(1999, 25, 944).forEach(Roman::test);
+        System.out.println(decode(args[0]));
     }
 }
