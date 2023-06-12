@@ -2,7 +2,7 @@
   <configuration default="false" name="Basic" type="Application" factoryName="Application">
     <option name="MAIN_CLASS_NAME" value="Katalculator" />
     <module name="Kata Test Task" />
-    <option name="PROGRAM_PARAMETERS" value="&quot; 12 +  I  &quot;" />
+    <option name="PROGRAM_PARAMETERS" value="&quot;1 + 2 &quot;" />
     <method v="2">
       <option name="Make" enabled="true" />
     </method>

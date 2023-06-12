@@ -54,8 +54,7 @@ public class Katalculator{
 
     public static void main(String[] args) throws Exception {
         if(args.length<1)   throw new Exception("Отсутствуют аргументы вызова");
-        //String expression = args[0].trim().toUpperCase();
-        String expression = "9 / 5".toUpperCase();
+        String expression = args[0].trim().toUpperCase();
 
         //Matching expression
         String arabPat ="([1-9]|(10))";
@@ -64,7 +63,7 @@ public class Katalculator{
         Pattern exPat = Pattern.compile("^("+ arabPat +"\\s*"+operPat+"\\s*"+ arabPat +")|"+
                                                "("+ romaPat +"\\s*"+operPat+"\\s*"+ romaPat +")$");
         Matcher deMatch = exPat.matcher(expression);
-        if(!deMatch.find()) throw new Exception("Введено некорректное выражение");
+        if(!deMatch.matches()) throw new Exception("Введено некорректное выражение");
 
         //Decode expression to pieces
         String op;
